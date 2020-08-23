@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+
+		<!-- Header -->
+		<header id="header">
+			
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="index.html#nav">Home</a></li>
+				<li class="active"><a href="projects#nav.html">Projects</a></li>
+				<li><a href="demos.html#nav">Demos</a></li>
+
+			</ul>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/tucker-arrants/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/TuckerArrants" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="https://www.kaggle.com/tuckerarrants" class="icon brands alt fa-kaggle"><span class="label">Kaggle</span></a></li>
+			</ul>
+		</nav>
+
+				<!-- Main -->
+						<div id="main">
+
+						<!-- Post -->
+						<section class="post">
+							<header class="major">
+								<h2 id="project1">Kaggle's Melanoma Competition
+									<br />
+								</h2>
+								<p>This was my first 'real' Kaggle competition; with a 55k prize pool and over 100,000 submissions over 3 months, it was quite an experience. Despite not having much time to invest in this competition, I managed to spend a couple spare weekends experimenting on this dataset of over 30,000 images and earned a silver medal for it. With fewer than 1.8% of samples of malevolent images, we were asked to predict the probability that an image of a lesion was melanomatous, so quite a bit of augmentation was required for decent scores (> 95% accuracy on public leaderboard).</p>
+								
+							</header>
+					
+			
+							<h3>Project Overview</h3>
+								<p><span class="image left"><img src="images/parameters.png" alt="" /></span>Initially, I simply repurposed my code from <a href="projects.html#project4"> this project</a> for binary classification and different metrics, but quickly saw the shortcomings of using CutMix and MixUp for a binary classification problem with extreme class imbalances. In the end, I used course dropout augmentation for training and crop/shift/shear/zoom augmentation for test time augmentation, giving me a public leaderboard score above 95% and a private score around 93%</p>
+								<p></p>
+								<ul class="actions special">
+									<li><a href="https://github.com/TuckerArrants/computer-vision/blob/master/melanoma-classification.ipynb" class="icon brands alt fa-github" style="font-size:28px"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.kaggle.com/tuckerarrants/melanoma-5fold-efficientnet-course-dropout" class="icon brands alt fa-kaggle" style="font-size:28px"><span class="label">Kaggle</span></a></li>
+								</ul>
+						</section>
+
+
+						<!-- Post -->
+						<section class="post">
+							<header class="major">
+								<h2 id="project2">Multilingual Textual Entailment with RoBERTa
+									<br />
+								</h2>
+								<p>Using RoBERTa, you can train a transformer to classify pairs of sequences (premises/hypothesis pairs) into three classes: entailment, contradiction, neutral. With XLM-RoBERTa, you can do the same, but in 100 different languages. In this project, I use techniques based on Google translate to generate additional samples for training augmentation and test time augmentation. The current model is able to classify over 5,000 premise/hypothesis pairs in 15 different languages with an accuracy above 80%.</p>
+								
+							</header>
+					
+			
+							<h3>Project Overview</h3>
+								<p><span class="image left"><img src="images/back-translation.PNG" alt="" /></span>In computer vision, it is standard practice to use image augmentation techniques, but this is not the case in NLP. This is because it is hard to find small transformations we can apply to sentences that do not drastically change their meaning. There are some options, like randoming swapping words with their synonyms or randomly swapping words, but these can still produce incoherent sentences.</p>
+								<p>Another thought is to use Google translate to map sentences to different languages and back to their original, as demonstrated in the photo. You can try this out yourself: it consistently changes the words and length of sentences while preserving its semantic structure. We can generate even more complex transformations by chaining together random mappings to different languages before translating back to the original language. This technique can also be used to fix class imbalances through upsampling and for TTA by generating multiple test datasets.</p>
+								<ul class="actions special">
+									<li><a href="https://github.com/TuckerArrants/nlp/blob/master/textual-entailment.ipynb" class="icon brands alt fa-github" style="font-size:28px"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.kaggle.com/tuckerarrants/xlm-r-back-translation-tta" class="icon brands alt fa-kaggle" style="font-size:28px"><span class="label">Kaggle</span></a></li>
+								</ul>
+						</section>
+
+						<!-- Post -->
+						<section class="post">
+							<header class="major">
+								<h2 id="project3">Text Generation with GPT-2
+									<br />
+								</h2>
+								<p>Using TensorFlow and the popular NLP library HuggingFace, you can easily import pre-trained Transformer models that have been trained to predict words, allowing them to generate text. The current leading model is GPT-2: a model with over 1.5 billion parameters that has been trained on over 8 million web pages. In this project, I demonstrate its performance and how to use different sampling techniques to increase the coherence of generated text.</p>
+								
+							</header>
+					
+			
+							<h3>Project Overview</h3>
+								<p><span class="image left"><img src="images/neural word.PNG" alt="" /></span>The full sized GPT-2 model is actually not available as the creators were concerned about 'malicious applications of the technology', but there are other sized models available for enthusiants to play with - the largest you can use is 774 million parameters, which is the one used in this project.</p>
+								<p>The model is able to generate fascinating texts when prompted with intriguing inputs - for example, when fed the input: "Legolas and Gimli advanced on the orcs, raising their weapons with a harrowing war cry.", the generated output is: 
+									<blockquote>
+										Legolas and Gimli advanced on the orcs, raising their weapons with a harrowing war cry. A large, hairy orc with a long neck stood in their way, roaring in a powerful, guttural tongue.
+
+										The hobbits cried out in alarm and hobbits-in-training shouted in relief. There was a pause as they considered the situation, then Gimli, Aragorn, and Legolas turned around to face the orc and began to run toward it.
+
+										"Aragorn!" yelled Gimli. "I want to know what is happening."
+
+										Aragorn took up the torch in his left hand and thrust it toward the orc. A massive axe appeared out of nowhere and smashed the orc's head...
+									</blockquote></p>
+								<ul class="actions special">
+									<li><a href="https://github.com/TuckerArrants/nlp/blob/master/text-generation-with-gpt2.ipynb" class="icon brands alt fa-github" style="font-size:28px"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.kaggle.com/tuckerarrants/text-generation-with-huggingface-gpt2" class="icon brands alt fa-kaggle" style="font-size:28px"><span class="label">Kaggle</span></a></li>
+								</ul>
+						</section>
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h2 id="project4">Transfer Learning on TPU<br />
+									</h2>
+									<p>In this project, I test different CNN backbones and augmentation techniques to classify images of flowers as 104 different classes. To do so, I relied on tensor processing units (TPUs) and the built in TPU datapipelines available through TensorFlow.</p>
+								</header>
+							
+								
+									<h3>Project Overview</h3>
+										<p><span class="image left"><img src="images/flowers.PNG" alt="" /></span>For  larger datasets that are several gigabytes or more, standard CPU/GPU training takes too long when performing complex image classification tasks, so you need to use Tensor Processing Units (TPUs) - hardware accelerators specifically designed for deep learning tasks. After performing the required TPU specific configuration steps, it is then easy to use advanced image augmentation techniques like CutMix and mixup (shown in images) to further improve model performance.</p>
+										<p><span class="image right"><img src="images/mixup.png" alt="" width="100" height="400"/></span>Keras makes it easy to import popular pre-trained models and their pre-trained weights, so all that remains is to re-purpose them for for your own task by definining a custom learning rate callback to fine tune the pre-trained weights. The final blended model has been tested on two datasets: 96% f1-score when tested on classifying 7,000 images of flowers into 104 types; 94% ROC AUC when tested on 10,000 images of moles for melanoma presence. So far, the model has been able to train on over 130GBs in one session, thanks to the power of TPUs.</p>
+										<ul class="actions special">
+											<li><a href="https://github.com/TuckerArrants/computer-vision" class="icon brands alt fa-github" style="font-size:28px"><span class="label">GitHub</span></a></li>
+											<li><a href="https://www.kaggle.com/tuckerarrants/kfold-efficientnet-cutmix-mixup-tta" class="icon brands alt fa-kaggle" style="font-size:28px"><span class="label">Kaggle</span></a></li>
+										</ul>
+							</section>
+ 
+
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h2 id="project5">Sentiment Extraction with RNNs and Transformers
+										<br />
+									</h2>
+									<p>Here, I experiment with different types of sequential neural network architectures to build a model capable of tagging Tweets that are about real natural disasters. After engineering new features, testing different word embeddings and network architectures, the model attains an accuracy above 84% (F1 score) on a 3000 Tweet unseen test set. The current project explores LSTMs, GRUs, and transformer models like BERT and XLNet. </p>
+								</header>
+						
+							
+								<h3>Project Overview</h3>
+									<p><span class="image left"><img src="images/word2vec.PNG" alt="" /></span>You can use a simple algorithm like Logistic Regression to classify text data by simply treating words as features and one hot encoding them. This produces vectors that are populated with mostly 0s and all words are orthogonal to eachother, so the model thinks no words are similar in meaning. A better approach is to use word embeddings, like Word2Vec or GloVe, which are word vector spaces designed such that words with similar meaning are clustered together.</p>
+									<p><span class="image right"><img src="images/huggingface.PNG" alt="" /></span>You can use a more complex model like a LSTM or GRU to help with remembering long-term information, which is important when we have longer sentences where the context of a word later in the sentence might be defined by a word at the very beginning of the sentence. You can also import much larger models that have their own encoding schemas easily with the HuggingFace library like BERT (and its many variants).</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/TuckerArrants/nlp/blob/master/NLP-with-Keras.ipynb" class="icon brands alt fa-github" style="font-size:28px"><span class="label">GitHub</span></a></li>
+										<li><a href="https://www.kaggle.com/tuckerarrants/nlp-with-twitter-eda-glove-keras-rnns" class="icon brands alt fa-kaggle" style="font-size:28px"><span class="label">Kaggle</span></a></li>
+									</ul>
+							</section>
+
+
+					</div>
+
+
+				
+				<!-- Footer -->
+					<footer id="footer">
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/tucker-arrants/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/TuckerArrants" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.kaggle.com/tuckerarrants" class="icon brands alt fa-kaggle"><span class="label">Kaggle</span></a></li>
+								</ul>
+							</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Tucker Arrants</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Tucker Arrants<br />
+						</h1>
+						<p>Welcome to my data science portfolio</p>
+						<ul class="actions">
+							<li><a href="#nav" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+
+				<!-- Header -->
+				<header id="header">
+				</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html#nav">Home</a></li>
+							<li><a href="projects.html#nav">Projects</a></li>
+							<li><a href="demos.html#nav">Demos</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/tucker-arrants/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/TuckerArrants" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.kaggle.com/tuckerarrants" class="icon brands alt fa-kaggle"><span class="label">Kaggle</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+				<div id="main">
+
+					<!-- Featured Post -->
+						<!-- Post -->
+						<section class="post featured">
+							<header class="major">
+								<h1 id = 'bio'>About<br />
+								</h1>
+								<p>“I was born not knowing and have had only a little time to change that here and there.” - Richard Feynman</p>
+							</header>
+							<div class="image main"><img src="images/headshot2.jpg" alt="" width = "800"></div>
+							<p>After graduating from Chapman University with a physics & philosophy degree, I began an internship at Pacific Life as a data analyst in HR where I am helping various groups automate their reporting processes. During this pandemic, I have spent much of my time researching natural language processing and computer vision. On this website, you'll find several ongoing projects within these two fields that I continually update as I experiment with different network architectures, preprocessings, and augmentation strategies.</p>
+							<a href="images/Arrants, Tucker - Resume.pdf" class="button" download><i class="fa fa-download"></i>Download Resume</a>
+						
+						</section>
+
+	
+
+						<!-- Posts -->
+						<section class="post featured">
+						
+								<header></header>
+									<h2><a href="projects.html#project2">
+										Multilingual Textual Entailment with RoBERTa</a></h2>
+								</header>
+								<a class="image fit"><img src="images/back-translation.PNG" alt="" width ="600"/></a>
+
+								<p>Using a RoBERTa model, you can train a transformer to classify pairs of sequences (premises/hypothesis pairs) into three classes: 0 - entailment, 1 - contradiction, 2 - neutral. With XLM-RoBERTa, you can do the same, but in 100 different languages. In this project, I use techniques based on Google translate to generate additional samples for training augmentation and test time augmentation. The current model is able to classify over 5,000 premise/hypothesis pairs in 15 different languages with an accuracy above 80%.</p>
+								<ul class="actions special">
+									<li><a href="https://github.com/TuckerArrants/nlp/blob/master/textual-entailment.ipynb" class="icon brands alt fa-github" style="font-size:28px"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.kaggle.com/tuckerarrants/xlm-r-back-translation-tta" class="icon brands alt fa-kaggle" style="font-size:28px"><span class="label">Kaggle</span></a></li>
+									
+					
+									
+								</ul>
+						</section>
+
+				
+
+						<!-- Posts -->
+							<section class="posts">
+								<article>
+									<header>
+										<h2><a href="projects.html#project4">
+											Transfer Learning on TPU</a></h2>
+									</header>
+									<a class="image fit"><img src="images/flowers.PNG" alt="" /></a>
+									<p>In this project, I fine-tuned deep CNNs and blend them into a meta-model to test on different computer vision problems. To accomodate for larger training sessions (> 1GB) and computationally expensive augmentation techniques, the model is designed to be trained on Tensor Processing Units.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/TuckerArrants/computer-vision" class="icon brands alt fa-github" style="font-size:28px"><span class="label">GitHub</span></a></li>
+										<li><a href="https://www.kaggle.com/tuckerarrants/kfold-efficientnet-cutmix-mixup-tta" class="icon brands alt fa-kaggle" style="font-size:28px"><span class="label">Kaggle</span></a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2><a href="projects.html#project5">
+										Sentiment Extraction with RNNs and Transformers</a></h2>
+									</header>
+									<a class="image fit"><img src="images/word2vec.PNG" alt="" /></a>
+									<p>Here, I experiment with different types of sequential neural network architectures to build a model capable of tagging Tweets that are about real natural disasters. After engineering new features, testing different word embeddings and network architectures, the model attains an accuracy above 84% (F1 score) on a 3000 Tweet unseen test set. The current project explores LSTMs, GRUs, and transformer models like BERT and XLNet.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/TuckerArrants/nlp/blob/master/NLP-with-Keras.ipynb" class="icon brands alt fa-github" style="font-size:28px"><span class="label">GitHub</span></a></li>
+										<li><a href="https://www.kaggle.com/tuckerarrants/nlp-with-twitter-eda-glove-keras-rnns" class="icon brands alt fa-kaggle" style="font-size:28px"><span class="label">Kaggle</span></a></li>
+									</ul>
+							</section>
+					</div>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						<section class="split contact">
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:tucker.arrants@gmail.com">tucker.arrants@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/tucker-arrants/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/TuckerArrants" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.kaggle.com/tuckerarrants" class="icon brands alt fa-kaggle"><span class="label">Kaggle</span></a></li>
+
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Tucker Arrants</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
