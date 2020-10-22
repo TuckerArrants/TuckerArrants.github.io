@@ -44,20 +44,21 @@
 						<!-- Post -->
 						<section class="post">
 							<header class="major">
-								<h2 id="project1">Kaggle's Melanoma Competition
+								<h2 id="project1">Seq2Seq for RNA Degredation Prediction
 									<br />
 								</h2>
-								<p>This was my first 'real' Kaggle competition; with a 55k prize pool and over 100,000 submissions over 3 months, it was quite an experience. Despite not having much time to invest in this competition, I managed to spend a couple spare weekends experimenting on this dataset of over 30,000 images and earned a silver medal for it. With fewer than 1.8% of samples of malevolent images, we were asked to predict the probability that an image of a lesion was melanomatous, so quite a bit of augmentation was required for decent scores (> 95% accuracy on public leaderboard).</p>
+								<p>mRNA vaccines are prime candidates for COVID-19, but they have a tendency to spontaneously degrade, which is a concern because a single ‘cut’ can render a mRNA vaccine useless. To improve the stability of these mRNA vaccines, we can leverage data science techniques to develop models/rules to predict the degradation rates at each base of an RNA molecule.</p>
 								
 							</header>
 					
+                            
+                            
 			
 							<h3>Project Overview</h3>
-								<p><span class="image left"><img src="images/parameters.png" alt="" /></span>Initially, I simply repurposed my code from <a href="projects.html#project4"> this project</a> for binary classification and different metrics, but quickly saw the shortcomings of using CutMix and MixUp for a binary classification problem with extreme class imbalances. In the end, I used course dropout augmentation for training and crop/shift/shear/zoom augmentation for test time augmentation, giving me a public leaderboard score above 95% and a private score around 93%</p>
-								<p></p>
+								<p><span class="image left"><img src="images/open vacc.png" alt="" /></span>Before this project, I had never been exposed to sequence to sequence modeling. This project allowed me to extend my knowledge of sequentially-formatted data into the purview of biology and to further develop my understanding of recurrent neural networks and transformers. In the end, the so-called 'graph transformers' ended up defeating the simple sequence2sequence models, but the RNNs seemed to perform well when predicting on RNA sequences less than 70 bases long.</p>
 								<ul class="actions special">
-									<li><a href="https://github.com/TuckerArrants/computer-vision/blob/master/melanoma-classification.ipynb" class="icon brands alt fa-github" style="font-size:28px"><span class="label">GitHub</span></a></li>
-									<li><a href="https://www.kaggle.com/tuckerarrants/melanoma-5fold-efficientnet-course-dropout" class="icon brands alt fa-kaggle" style="font-size:28px"><span class="label">Kaggle</span></a></li>
+									<li><a href="https://github.com/TuckerArrants/open-vaccine" class="icon brands alt fa-github" style="font-size:28px"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.kaggle.com/tuckerarrants/openvaccine-gru-lstm" class="icon brands alt fa-kaggle" style="font-size:28px"><span class="label">Kaggle</span></a></li>
 								</ul>
 						</section>
 
@@ -109,7 +110,7 @@
 									<li><a href="https://github.com/TuckerArrants/nlp/blob/master/text-generation-with-gpt2.ipynb" class="icon brands alt fa-github" style="font-size:28px"><span class="label">GitHub</span></a></li>
 									<li><a href="https://www.kaggle.com/tuckerarrants/text-generation-with-huggingface-gpt2" class="icon brands alt fa-kaggle" style="font-size:28px"><span class="label">Kaggle</span></a></li>
 								</ul>
-						</section>
+				        </section>
 
 						<!-- Post -->
 							<section class="post">
