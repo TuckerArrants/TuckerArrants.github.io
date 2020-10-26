@@ -55,7 +55,7 @@
                             
 			
 							<h3>Project Overview</h3>
-								<p><span class="image left"><img src="images/open vacc.png" alt="" /></span>Before this project, I had never been exposed to sequence to sequence modeling. This project allowed me to extend my knowledge of sequentially-formatted data into the purview of biology and to further develop my understanding of recurrent neural networks and transformers. In the end, the so-called 'graph transformers' ended up defeating the simple sequence2sequence models, but the RNNs seemed to perform well when predicting on RNA sequences less than 70 bases long.</p>
+								<p><span class="image left"><img src="images/open%20vacc.PNG" alt="" /></span>Before this project, I had never been exposed to sequence to sequence modeling. This project allowed me to extend my knowledge of sequentially-formatted data into the purview of biology and to further develop my understanding of recurrent neural networks and transformers. In the end, the so-called 'graph transformers' ended up defeating the simple sequence2sequence models, but the RNNs seemed to perform well when predicting on RNA sequences less than 70 bases long.</p>
 								<ul class="actions special">
 									<li><a href="https://github.com/TuckerArrants/open-vaccine" class="icon brands alt fa-github" style="font-size:28px"><span class="label">GitHub</span></a></li>
 									<li><a href="https://www.kaggle.com/tuckerarrants/openvaccine-gru-lstm" class="icon brands alt fa-kaggle" style="font-size:28px"><span class="label">Kaggle</span></a></li>
@@ -113,21 +113,21 @@
 				        </section>
 
 						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<h2 id="project4">Transfer Learning on TPU<br />
-									</h2>
-									<p>In this project, I test different CNN backbones and augmentation techniques to classify images of flowers as 104 different classes. To do so, I relied on tensor processing units (TPUs) and the built in TPU datapipelines available through TensorFlow.</p>
-								</header>
-							
-								
-									<h3>Project Overview</h3>
-										<p><span class="image left"><img src="images/flowers.PNG" alt="" /></span>For  larger datasets that are several gigabytes or more, standard CPU/GPU training takes too long when performing complex image classification tasks, so you need to use Tensor Processing Units (TPUs) - hardware accelerators specifically designed for deep learning tasks. After performing the required TPU specific configuration steps, it is then easy to use advanced image augmentation techniques like CutMix and mixup (shown in images) to further improve model performance.</p>
-										<p><span class="image right"><img src="images/mixup.png" alt="" width="100" height="400"/></span>Keras makes it easy to import popular pre-trained models and their pre-trained weights, so all that remains is to re-purpose them for for your own task by definining a custom learning rate callback to fine tune the pre-trained weights. The final blended model has been tested on two datasets: 96% f1-score when tested on classifying 7,000 images of flowers into 104 types; 94% ROC AUC when tested on 10,000 images of moles for melanoma presence. So far, the model has been able to train on over 130GBs in one session, thanks to the power of TPUs.</p>
-										<ul class="actions special">
-											<li><a href="https://github.com/TuckerArrants/computer-vision" class="icon brands alt fa-github" style="font-size:28px"><span class="label">GitHub</span></a></li>
-											<li><a href="https://www.kaggle.com/tuckerarrants/kfold-efficientnet-cutmix-mixup-tta" class="icon brands alt fa-kaggle" style="font-size:28px"><span class="label">Kaggle</span></a></li>
-										</ul>
+				        <section class="post">
+                            <header class="major">
+                                <h2 id="project4">Transfer Learning on TPU<br />
+                                </h2>
+                                <p>In this project, I test different CNN backbones and augmentation techniques to classify images of flowers as 104 different classes. To do so, I relied on tensor processing units (TPUs) and the built in TPU datapipelines available through TensorFlow.</p>
+                            </header>
+
+
+                                <h3>Project Overview</h3>
+                                    <p><span class="image left"><img src="images/flowers.PNG" alt="" /></span>For  larger datasets that are several gigabytes or more, standard CPU/GPU training takes too long when performing complex image classification tasks, so you need to use Tensor Processing Units (TPUs) - hardware accelerators specifically designed for deep learning tasks. After performing the required TPU specific configuration steps, it is then easy to use advanced image augmentation techniques like CutMix and mixup (shown in images) to further improve model performance.</p>
+                                    <p><span class="image right"><img src="images/mixup.png" alt="" width="100" height="400"/></span>Keras makes it easy to import popular pre-trained models and their pre-trained weights, so all that remains is to re-purpose them for for your own task by definining a custom learning rate callback to fine tune the pre-trained weights. The final blended model has been tested on two datasets: 96% f1-score when tested on classifying 7,000 images of flowers into 104 types; 94% ROC AUC when tested on 10,000 images of moles for melanoma presence. So far, the model has been able to train on over 130GBs in one session, thanks to the power of TPUs.</p>
+                                    <ul class="actions special">
+                                        <li><a href="https://github.com/TuckerArrants/computer-vision" class="icon brands alt fa-github" style="font-size:28px"><span class="label">GitHub</span></a></li>
+                                        <li><a href="https://www.kaggle.com/tuckerarrants/kfold-efficientnet-cutmix-mixup-tta" class="icon brands alt fa-kaggle" style="font-size:28px"><span class="label">Kaggle</span></a></li>
+                                    </ul>
 							</section>
  
 
